@@ -1,0 +1,9 @@
+{% if latest_org %}
+    <ul>
+    {% for org in latest_org %}
+        <li><a href="{% url 'logger:org_detail' org.id %}">{{ org.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No orgs are available.</p>
+{% endif %}
